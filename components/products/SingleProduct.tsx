@@ -178,7 +178,7 @@ opacity-50
 
            <div className='flex items-center gap-4 mt-8'>
         <p className="font-mono text-2xl font-semibold">
-          Rs.{product.price.toLocaleString()}
+          Rs.{product?.price ? product.price.toLocaleString() : '15000'}
         </p>
 
      
