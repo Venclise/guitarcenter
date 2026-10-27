@@ -13,6 +13,8 @@ type item = {
   description: string
   category: string
   image: string[]
+  price: number,
+  cuttedPrice: number,
 }
 
 

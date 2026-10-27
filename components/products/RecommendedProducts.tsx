@@ -23,7 +23,7 @@ export type Product = {
   title: string;
   description: string;
   price: number;
-  cutprice: number;
+  cuttedPrice: number;
   image: string[];
   category: string;
   subcategory: string;
