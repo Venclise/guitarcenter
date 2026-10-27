@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toast";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatBtn from "@/components/ChatBtn";
+import { Suspense } from "react";
 
 const geist = Geist({
   variable: "--font-sans",
@@ -24,8 +25,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body className="min-h-full flex flex-col antialiased">
    
-        <Header />
+       <Suspense fallback={null}>
+          <Header />
+        </Suspense>
+       <Suspense fallback={null}>
+
     <ChatBtn />
+        </Suspense>
+
         <main className="flex-1">
           {children}
         </main>
