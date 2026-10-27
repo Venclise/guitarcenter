@@ -1,4 +1,4 @@
-export const dynamic = 'force-dynamic';
+
 import ProductCard from "@/components/products/ProductCard";
 import Link from "next/link";
 
