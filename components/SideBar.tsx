@@ -29,7 +29,7 @@ export default function SideBar() {
     <Menu />
     </Button>
   </SheetTrigger>
-  <SheetContent side="right" className="overflow-y-scroll p-5">
+  <SheetContent side="right" className="overflow-y-scroll p-2">
     <SheetHeader>
       <SheetTitle>    
          <Link href="/" className="text-xl  font-bold ">
@@ -43,14 +43,14 @@ export default function SideBar() {
       categories.map(({Catslug,title,subcategories}) => (
   <AccordionItem value={`item-${title}`} className='w-full border-white'>
     <div className="flex items-center w-full justify-between ">
-<Link href={`/products/${Catslug}`} className="font-semibold text-black text-2xl">
+<Link href={`/products/${Catslug}`} className="font-semibold text-black text-xl lg:text-2xl">
 <SheetClose className="cursor-pointer hover:underline">
 {title}
 </SheetClose>
 </Link>
     <AccordionTrigger className='w-max cursor-pointer  '></AccordionTrigger>
     </div>
-    <AccordionContent className='flex flex-col items-start justify-start gap-4 p-5'>
+    <AccordionContent className='flex flex-col items-start justify-start gap-4 p-5 '>
        {subcategories.map(({title,slug}) => (
          <Link
            href={`/products/${Catslug}/${slug}`}

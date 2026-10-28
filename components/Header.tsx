@@ -72,14 +72,10 @@ export default function Header() {
           </div>
 
        
-        <div className="flex items-center gap-5">
+        <div className="flex items-center lg:gap-5 gap-3 ">
           <div className="">
             <SearchInput  isSolid={isSolid}/>
           </div>
-
-          
-
-        
           <div className="lg:hidden flex items-center">
             <SideBar />
           </div>

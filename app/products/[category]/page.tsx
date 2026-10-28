@@ -109,8 +109,8 @@ export default async function Page({
   const data = await res.json();
 
   return (
-    <div className="mt-24 p-5">
-      <h1 className="text-2xl lg:text-4xl font-bold uppercase tracking-wide">
+    <div className="mt-24">
+      <h1 className="text-2xl lg:text-4xl font-bold uppercase tracking-wide p-5">
         Shop {formattedCategory}
       </h1>
 
@@ -119,7 +119,7 @@ export default async function Page({
           No products found in this category.
         </div>
       ) : (
-         <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-1 gap-y-2 py-10">
+         <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-1 gap-y-1 py-20">
           {data.map((product: any) => (
             <ProductCard data={product} key={product._id} />
           ))}

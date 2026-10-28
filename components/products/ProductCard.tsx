@@ -7,6 +7,7 @@ import ProductActions from "./ProductActions";
 import { Badge } from "../ui/badge";
 
 type ProductData = {
+  slug: string;
   _id: string;
   title: string;
   description: string;
@@ -21,7 +22,7 @@ export default function ProductCard({ data }: { data: ProductData }) {
   const isDashboard = pathname === "/dashboard";
 
   return (
-    <div className="group relative flex flex-col bg-[#f5f5f5]  overflow-hidden p-4 sm:p-6 transition-all duration-300 h-[24rem] md:h-[28rem] ">
+    <div className="group relative flex flex-col bg-[#f5f5f5]  overflow-hidden p-4 sm:p-6 transition-all duration-300 h-[22rem] md:h-[24rem] ">
       
 
     
@@ -39,7 +40,7 @@ export default function ProductCard({ data }: { data: ProductData }) {
       )}
 
       <Link
-        href={`${isDashboard ? "#" : `/products/item/${data._id}`}`}
+        href={`${isDashboard ? "#" : `/products/item/${data.slug}`}`}
         className="flex-1 relative flex items-center justify-center p-4"
       >
         <div className="relative w-full h-full min-h-[220px]">
@@ -67,13 +68,28 @@ export default function ProductCard({ data }: { data: ProductData }) {
       </Link>
 
    
-      <div className="mt-3 flex flex-col text-left">
+      <div className="flex flex items-center justify-between">
         <p
 
-          className="font-semibold capitalize text-gray-900 text-sm  leading-snug line-clamp-2 hover:underline"
+          className="font-semibold capitalize text-gray-900 text-xs md:text-sm  max-w-xs line-clamp-2 hover:underline"
         >
           {data.title}
         </p>
+
+<div>
+  {
+    data.cuttedPrice && (
+
+      
+      <p className="font-semibold text-neutral-500 text-xs line-through">
+          PKR.{data.cuttedPrice.toLocaleString()}
+        </p>
+    )
+}
+        <p className="font-semibold text-black text-xs">
+          PKR.{data.price.toLocaleString()}
+        </p>
+</div>
       </div>
     </div>
   );

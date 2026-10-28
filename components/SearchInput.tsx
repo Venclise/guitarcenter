@@ -60,7 +60,7 @@ export default function   SearchInput({isSolid}:{isSolid: boolean}) {
     <button
      
       type="button"
-      className={`group flex items-center gap-2.5 px-5 py-1.5 rounded-full border transition-all duration-300 cursor-pointer ${
+      className={`group flex items-center gap-2.5 px-3 lg:px-5 py-1.5 rounded-full border transition-all duration-300 cursor-pointer ${
         isSolid
           ? "border-gray-800 text-gray-900 hover:bg-gray-100"
           : "border-white/80 text-white hover:bg-white/10"

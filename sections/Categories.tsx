@@ -17,10 +17,10 @@ export default function Categories() {
       </AnimatedText>
 
       <Swiper
-        spaceBetween={10}
-        slidesPerView={3}
+        spaceBetween={20}
+        slidesPerView={2.5}
         breakpoints={{
-          640: { slidesPerView: 2.5, spaceBetween: 24 },
+          640: { slidesPerView: 2.5, spaceBetween: 20 },
           768: { slidesPerView: 4, spaceBetween: 14 },
           1024: { slidesPerView: 5, spaceBetween: 10 },
         }}

@@ -43,8 +43,8 @@ process.env.NEXT_PUBLIC_SITE_URL
   }, [currentSort]); 
 
   return (
-    <div className="mt-24 p-5">
-      <div className="flex items-center justify-between gap-4">
+    <div className="mt-24">
+      <div className="flex items-center justify-between gap-4 p-5">
         <h1 className="text-2xl lg:text-3xl font-semibold uppercase">
           Shop {currentSort === "newest" ? "New Arrivals" : "Musical Instruments"}
         </h1>
@@ -81,7 +81,7 @@ process.env.NEXT_PUBLIC_SITE_URL
         </Select>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 gap-y-2 py-10">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 gap-y-1 py-20">
         {products.length > 0 ? (
           products.map((item) => <ProductCard key={item._id} data={item} />)
         ) : (

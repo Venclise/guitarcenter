@@ -74,7 +74,7 @@ export default function SingleProduct({ product }: { product: Product }) {
               {product.image.map((img, i) => (
                 <SwiperSlide
                   key={i}
-                  className="w-full h-full flex  items-center justify-center lg:rounded-3xl relative bg-[#F7F7F7]"
+                  className="w-full h-full flex  items-center justify-center lg:rounded-3xl  relative bg-[#F5F5F5]"
                 >
                   <Image
                     src={img}
@@ -129,7 +129,7 @@ export default function SingleProduct({ product }: { product: Product }) {
           </div>
 
           {product.image.length > 1 && (
-            <div className="lg:flex items-start hidden justify-start w-full py-5 px-3 lg:p-0 lg:w-max h-full  flex-row lg:flex-col  gap-4 ">
+            <div className="lg:flex items-start hidden justify-start w-full  lg:w-max h-full  flex-row lg:flex-col  gap-4 ">
               {product.image.map((img, i) => (
                 <div
                   key={i}
@@ -153,43 +153,26 @@ export default function SingleProduct({ product }: { product: Product }) {
         </div>
       )}
 
-      {product.image.length > 1 && (
-        <div className="  w-full lg:hidden mt-8     flex items-center justify-center z-50     gap-1">
-          {product.image.map((img, i) => (
-            <div
-              onClick={() => {
-                swiperRef.current?.slideTo(i);
-              }}
-              key={i}
-              className={`w-[.5rem] h-[.5rem]  
-
-                 
-bg-black
-opacity-50
-
-            rounded-full  relative cursor-pointer overflow-hidden transition-all ${activeIndex === i && "bg-black w-[.7rem] h-[.7rem] opacity-100"}`}
-            />
-          ))}
-        </div>
-      )}
+ 
 
       <div className="flex  gap-8 flex-col p-5    ">
-        <h1 className="text-2xl   font-semibold ">{product.title}</h1>
+        <h1 className="text-2xl lg:text-3xl   font-semibold ">{product.title}</h1>
 
-           <div className='flex items-center gap-4 mt-8'>
-        <p className="font-mono text-2xl font-semibold">
-          Rs.{product?.price ? product.price.toLocaleString() : '15000'}
-        </p>
 
-     
-       
+
+<div className="flex flex-col gap-2 mt-8">
+
         {
- product.cuttedPrice > product.price && (
-  <sup className="font-mono text-lg line-through text-neutral-500">
+          product.cuttedPrice > product.price && (
+            <sup className="font-mono text-md  line-through text-neutral-500">
           Rs.{product.cuttedPrice.toLocaleString()}
         </sup>
           )
         }
+           <div className='flex items-center gap-4 '>
+        <p className="font-mono text-2xl md:text-3xl font-semibold">
+          Rs.{product?.price ? product.price.toLocaleString() : '15000'}
+        </p>
 
           
         { product.cuttedPrice > product.price &&  (
@@ -197,6 +180,7 @@ opacity-50
    {Math.round(((product.cuttedPrice - product.price) / product.cuttedPrice) * 100)}% off
           </Badge>
         )}
+        </div>
     </div>
 
  <div

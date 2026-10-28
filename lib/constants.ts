@@ -115,4 +115,35 @@ export const categories: Category[] = [
       { id: 805, title: "Dholak Tuning Spanners", slug: "dholak-tuning-spanners" },
     ],
   },
+  {
+  id: 9,
+  title: "Harmonium",
+  Catslug: "harmonium",
+  img: "/harmonium.png",
+  subcategories: [
+    { id: 901, title: "Single Bellow Harmonium", slug: "single-bellow-harmonium" },
+    { id: 902, title: "Double Bellow Harmonium", slug: "double-bellow-harmonium" },
+    { id: 903, title: "Triple Bellow Harmonium", slug: "triple-bellow-harmonium" },
+    { id: 904, title: "Portable / Folding Harmonium", slug: "portable-folding-harmonium" },
+    { id: 905, title: "Scale Changer Harmonium", slug: "scale-changer-harmonium" },
+    { id: 906, title: "Compact / Travel Harmonium", slug: "compact-travel-harmonium" },
+    { id: 907, title: "Harmonium Bags & Padded Cases", slug: "harmonium-bags-cases" },
+    { id: 908, title: "Harmonium Reeds & Spare Parts", slug: "harmonium-reeds-spare-parts" },
+  ],
+},
+{
+  id: 10,
+  title: "Ukulele",
+  Catslug: "ukulele",
+  img: "/ukulele.png",
+  subcategories: [
+    { id: 1001, title: "Soprano Ukulele", slug: "soprano-ukulele" },
+    { id: 1002, title: "Concert Ukulele", slug: "concert-ukulele" },
+    { id: 1003, title: "Tenor Ukulele", slug: "tenor-ukulele" },
+    { id: 1004, title: "Baritone Ukulele", slug: "baritone-ukulele" },
+    { id: 1005, title: "Electric / Acoustic-Electric Ukulele", slug: "electric-ukulele" },
+    { id: 1006, title: "Ukulele Bags & Cases", slug: "ukulele-bags-cases" },
+    { id: 1007, title: "Ukulele Strings & Accessories", slug: "ukulele-strings-accessories" },
+  ],
+}
 ];
