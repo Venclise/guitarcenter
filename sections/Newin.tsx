@@ -15,6 +15,7 @@ type item = {
   image: string[]
    price: number,
   cuttedPrice: number,
+    slug: string,
 }
 
 

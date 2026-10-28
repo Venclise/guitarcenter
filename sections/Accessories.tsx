@@ -8,6 +8,7 @@ import React, { useEffect, useState } from 'react'
 
 
 type item = {
+  slug: string,
   _id: string
   title: string
   description: string
