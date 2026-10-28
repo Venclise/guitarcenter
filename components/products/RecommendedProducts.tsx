@@ -14,6 +14,7 @@ type itinerary = {
   title: string;
   day: number;
   activities: string;
+  
 };
 
 
@@ -32,6 +33,7 @@ export type Product = {
   nights: number;
   location: string;
   sold: number
+    slug: string,
   
 };
 
