@@ -15,10 +15,10 @@ export default function Footer() {
   },[])
   return (
     <>
-    <div className='bg-gray-50 border-t lg:p-20 p-10 h-max w-full flex justify-between gap-4 flex-wrap '>
+    <div className='bg-gray-50 border-t lg:p-20 p-5 h-max w-full flex justify-between gap-4 flex-wrap '>
       <div className='flex flex-col gap-2 '>
              <Link href="/" className="text-xl  font-bold ">
-          Guitar center
+          Guitar center 
         </Link>
         <p className='text-sm'>{year} © All rights reserved</p>
         <p className='text-sm max-w-sm capitalize'>We deal in all kinds of musical products guitars,drums,keyboard,darbuka,amplifiers,Accessories and more</p>
@@ -43,7 +43,7 @@ export default function Footer() {
 >
   <MessageCircle  strokeWidth={1} size={15}/>
    Contact us on Whatsapp
-    </Link>
+    </Link> 
    <a href="mailto:"
     className="text-sm hover:underline flex items-center gap-2"
     

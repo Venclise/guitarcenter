@@ -68,7 +68,7 @@ export default function ProductCard({ data }: { data: ProductData }) {
       </Link>
 
    
-      <div className="flex flex items-center justify-between">
+      <div className="flex flex items-center justify-between gap-2">
         <p
 
           className="font-semibold capitalize text-gray-900 text-xs md:text-sm  max-w-xs line-clamp-2 hover:underline"

@@ -155,63 +155,42 @@ export default function SingleProduct({ product }: { product: Product }) {
 
  
 
-      <div className="flex  gap-8 flex-col p-5    ">
+      <div className="flex  gap-5 flex-col p-7   ">
         <h1 className="text-2xl lg:text-3xl   font-semibold ">{product.title}</h1>
 
 
 
-<div className="flex flex-col gap-2 mt-8">
+<div className="flex flex-col gap-2 ">
 
         {
           product.cuttedPrice > product.price && (
             <sup className="font-mono text-md  line-through text-neutral-500">
-          Rs.{product.cuttedPrice.toLocaleString()}
+          PKR.{product.cuttedPrice.toLocaleString()}
         </sup>
           )
         }
            <div className='flex items-center gap-4 '>
         <p className="font-mono text-2xl md:text-3xl font-semibold">
-          Rs.{product?.price ? product.price.toLocaleString() : '15000'}
+          PKR.{product?.price ? product.price.toLocaleString() : '15000'}
+  
         </p>
 
           
         { product.cuttedPrice > product.price &&  (
-          <Badge className=" text-sm font-mono rounded-full text-green-700  bg-transparent font-semibold ">
+          <Badge className=" text-sm font-mono rounded-full text-green-700  bg-green-100 font-semibold ">
    {Math.round(((product.cuttedPrice - product.price) / product.cuttedPrice) * 100)}% off
           </Badge>
         )}
         </div>
     </div>
 
- <div
-          className="flex  gap-4 bg-gray-50 cursor-pointer p-2 lg:p-5 rounded-4xl"
-          onClick={() => {
-            setLength(0);
-            length === -1 ? setLength(200) : setLength(-1);
-          }}
-        >
-          <h2 className="font-semibold text-sm max-w-md">
-            Details:
-          </h2>
-          <p className="text-sm text-black font-normal leading-6 max-w-xl">
-            {product.description.length > 200
-              ? product.description.slice(0, length)
-              : product.description}
-            {product.description.length > 55 && (
-              <Button variant="ghost" className="hover:bg-gray-200">
-                {length === -1 ? "...show less" : "...show more"}
-              </Button>
-            )}
-          </p>
-        </div>
-
         <div className="w-full flex flex-col gap-2 ">
           <Button className="bg-green-500  py-4 hover:bg-green-600 flex-1 flex items-center justify-center rounded-full">
             <Link
-              href={`https://wa.me/923019356202?text=Hi%20what%20is%20the%20price%20of%20${encodeURIComponent(product.title)}`}
+              href={`https://wa.me/923019356202?text=Hi%20I%20want%20the%20to%20order%20${encodeURIComponent(product.title)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center gap-2 justify-center "
+              className="w-full flex items-center gap-2 justify-center"
             >
               <Image
                 src="/whatsapp.svg"
@@ -234,6 +213,31 @@ export default function SingleProduct({ product }: { product: Product }) {
             </a>
           </Button>
         </div>
+
+
+        
+ <div
+          className="flex flex-col  gap-2 bg-gray-50 cursor-pointer p-2 lg:p-5 rounded-4xl"
+          onClick={() => {
+            setLength(0);
+            length === -1 ? setLength(200) : setLength(-1);
+          }}
+        >
+          <h2 className="font-semibold text-sm max-w-md">
+            Details
+          </h2>
+          <p className="text-sm text-black font-normal leading-6 max-w-xl">
+            {product.description.length > 200
+              ? product.description.slice(0, length)
+              : product.description}
+            {product.description.length > 55 && (
+              <Button variant="ghost" className="hover:bg-gray-200">
+                {length === -1 ? "...show less" : "...show more"}
+              </Button>
+            )}
+          </p>
+        </div>
+
        
         <Accordion>
           <AccordionItem

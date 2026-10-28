@@ -45,10 +45,15 @@ export default function Header() {
         }`}
       >
         <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4">
 
+  <div className="lg:hidden flex items-center">
+            <SideBar />
+          </div>
         <Link href="/" className="text-xl  font-bold ">
           Guitar center
         </Link>
+          </div>
 
         <div className="hidden lg:flex items-center gap-4">
                 {
@@ -76,9 +81,7 @@ export default function Header() {
           <div className="">
             <SearchInput  isSolid={isSolid}/>
           </div>
-          <div className="lg:hidden flex items-center">
-            <SideBar />
-          </div>
+        
         </div>
       </nav>
     </header>
